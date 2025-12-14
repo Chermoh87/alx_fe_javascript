@@ -42,5 +42,3 @@ This project is part of the **ALX Front-End JavaScript curriculum** and focuses 
 - Fetch API
 
 ---
-
-## 📂 Project Structure

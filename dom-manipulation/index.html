@@ -6,33 +6,27 @@
   <title>Dynamic Quote Generator</title>
 </head>
 <body>
-
   <h1>Dynamic Quote Generator</h1>
 
-  <!-- Category Filter -->
-  <select id="categoryFilter" onchange="filterQuote()">
+  <select id="categoryFilter" onchange="filterQuotes()">
     <option value="all">All Categories</option>
   </select>
 
-  <!-- Quote Display -->
   <div id="quoteDisplay"></div>
-
-  <!-- Sync Status (REQUIRED for Task 3 UI check) -->
-  <div id="syncStatus"></div>
-
-  <!-- Show Quote Button -->
   <button id="newQuote">Show New Quote</button>
 
-  <!-- Add Quote -->
-  <div>
-    <input id="newQuoteText" type="text" placeholder="Enter a new quote">
-    <input id="newQuoteCategory" type="text" placeholder="Enter quote category">
+  <div id="syncStatus" style="margin-top: 10px; color: blue;"></div>
+
+  <div id="formContainer" style="margin-top: 20px;">
+    <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
+    <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
     <button onclick="addQuote()">Add Quote</button>
   </div>
 
-  <!-- JSON Import / Export -->
-  <button onclick="exportQuotes()">Export Quotes</button>
-  <input type="file" accept=".json" onchange="importFromJsonFile(event)">
+  <div style="margin-top: 20px;">
+    <button onclick="exportToJsonFile()">Export Quotes</button>
+    <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
+  </div>
 
   <script src="script.js"></script>
 </body>
